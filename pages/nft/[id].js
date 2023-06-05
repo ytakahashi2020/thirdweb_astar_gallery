@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import {
   useContractEvents,
   useNFT,
@@ -6,11 +7,12 @@ import {
 } from "@thirdweb-dev/react";
 import { useRouter, router } from "next/router";
 import styles from "../../styles/Home.module.css";
-import { NFT_CONTRACT_ADDRESS } from "../../const/addresses";
+import { ContractsContext } from "../ContractsContext";
 
 const NFTDtailPage = () => {
   const { id } = useRouter().query;
-  const { contract } = useContract(NFT_CONTRACT_ADDRESS);
+  const { searchContract } = useContext(ContractsContext);
+  const { contract } = useContract(searchContract);
   const { data: nft, isLoading: isLoadingNFT } = useNFT(contract, id);
   const { data: events, isLoading: isLoadingEvents } = useContractEvents(
     contract,
