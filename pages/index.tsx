@@ -22,7 +22,6 @@ const Home: NextPage = () => {
     }
   )
   return (
-    <ContractsContext.Provider value={{ searchContract, setSearchContract }}>
       <div className={styles.container}>
         <h1 style={{ textAlign: "center" }} >zkSync Era Testnet Project</h1>
         <div className={styles.pagnation}>
@@ -51,7 +50,6 @@ const Home: NextPage = () => {
           <button onClick={() => setPage(page + 1)}>Next</button>
         </div>
       </div>
-    </ContractsContext.Provider>
   );
 };
 
