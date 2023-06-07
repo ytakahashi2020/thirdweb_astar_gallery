@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   )
   return (
       <div className={styles.container}>
-        <h1 style={{ textAlign: "center" }} >zkSync Era Testnet Project</h1>
+        <h1 style={{ textAlign: "center" }} >Astar NFT Project</h1>
         <div className={styles.pagnation}>
           <input 
               type="string"
